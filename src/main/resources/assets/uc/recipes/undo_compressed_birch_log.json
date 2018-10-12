@@ -5,14 +5,14 @@
     [
 
     {
-      "item": "uc:compressed_diamond_block"
+      "item": "uc:compressed_birch_log"
     }
     
     ],
 
     "result": 
     {
-        "item": "minecraft:diamond_block",
+        "item": "minecraft:birch_log",
         "count": 9
     }
 }
