@@ -12,7 +12,8 @@
     {
         "L":
         {
-            "item": "minecraft:oak_log"
+            "item": "minecraft:log",
+            "data": 0
         }
     },
     

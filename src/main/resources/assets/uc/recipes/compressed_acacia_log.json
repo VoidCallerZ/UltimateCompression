@@ -12,7 +12,8 @@
     {
         "L":
         {
-            "item": "minecraft:acacia_log"
+            "item": "minecraft:log2",
+            "data": 0
         }
     },
     

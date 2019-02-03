@@ -12,7 +12,8 @@
     {
         "L":
         {
-            "item": "minecraft:birch_log"
+            "item": "minecraft:log",
+            "data": 2
         }
     },
     

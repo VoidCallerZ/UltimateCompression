@@ -3,10 +3,10 @@ package com.VoidCallerZ.UltimateCompression.init;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.VoidCallerZ.UltimateCompression.blocks.BlockBase;
 import com.VoidCallerZ.UltimateCompression.blocks.CompressedStoneTypeBlockBase;
 import com.VoidCallerZ.UltimateCompression.blocks.CompressedWoodTypeBlockBase;
 import com.VoidCallerZ.UltimateCompression.blocks.CompressedMetalBlockBase;
+import com.VoidCallerZ.UltimateCompression.blocks.CompressedObsidianBlockBase;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -34,6 +34,10 @@ public class ModBlocks
 	//Emerald Blocks
 	public static final Block COMPRESSED_EMERALD_BLOCK = new CompressedMetalBlockBase("compressed_emerald_block", Material.IRON);
 	public static final Block DOUBLE_COMPRESSED_EMERALD_BLOCK = new CompressedMetalBlockBase("double_compressed_emerald_block", Material.IRON);
+	
+	//Obsidian Blocks
+	public static final Block COMPRESSED_OBSIDIAN_BLOCK = new CompressedObsidianBlockBase("compressed_obsidian_block", Material.ROCK);
+	public static final Block DOUBLE_COMPRESSED_OBSIDIAN_BLOCK = new CompressedObsidianBlockBase("double_compressed_obsidian_block", Material.ROCK);
 	
 	//WoodLog Blocks
 	public static final Block COMPRESSED_OAK_LOG = new CompressedWoodTypeBlockBase("compressed_oak_log", Material.WOOD);

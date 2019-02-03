@@ -1,4 +1,5 @@
-//Items
+//CreativeTabs
+itemGroup.ultimatecompressiontab=Ultimate Compression
 
 //Blocks of Metal
 tile.compressed_diamond_block.name=Compressed Block of Diamond
@@ -7,6 +8,14 @@ tile.compressed_iron_block.name=Compressed Block of Iron
 tile.double_compressed_iron_block.name=Double Compressed Block of Iron
 tile.compressed_gold_block.name=Compressed Block of Gold
 tile.double_compressed_gold_block.name=Double Compressed Block of Gold
+tile.compressed_redstone_block.name=Compressed Block of Redstone
+tile.double_compressed_redstone_block.name=Double Compressed Block of Redstone
+tile.compressed_emerald_block.name=Compressed Block of Emerald
+tile.double_compressed_emerald_block.name=Double Compressed Block of Emerald
+
+//Obsidian Blocks
+tile.compressed_obsidian_block.name=Compressed Block of Obsidian
+tile.double_compressed_obsidian_block.name=Compressed Block of Obsidian
 
 //WoodBlocks
 tile.compressed_oak_log.name=Compressed Oak Log
@@ -21,3 +30,17 @@ tile.double_compressed_spruce_log.name=Double Compressed Spruce Log
 tile.double_compressed_jungle_log.name=Double Compressed Jungle Log
 tile.double_compressed_acacia_log.name=Double Compressed Acacia Log
 tile.double_compressed_darkoak_log.name=Double Compressed Dark Oak Log
+
+//WoodPlanks
+tile.compressed_oak_planks.name=Compressed Oak Planks
+tile.compressed_birch_planks.name=Compressed Birch Planks
+tile.compressed_spruce_planks.name=Compressed Spruce Planks
+tile.compressed_jungle_planks.name=Compressed Jungle Planks
+tile.compressed_acacia_planks.name=Compressed Acacia Planks
+tile.compressed_darkoak_planks.name=Compressed Darkoak Planks
+tile.double_compressed_oak_planks.name=Double Compressed Oak Planks
+tile.double_compressed_birch_planks.name=Double Compressed Birch Planks
+tile.double_compressed_spruce_planks.name=Double Compressed Spruce Planks
+tile.double_compressed_jungle_planks.name=Double Compressed Jungle Planks
+tile.double_compressed_acacia_planks.name=Double Compressed Acacia Planks
+tile.double_compressed_darkoak_planks.name=Double Compressed Darkoak Planks

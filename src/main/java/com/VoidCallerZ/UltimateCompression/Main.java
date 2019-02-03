@@ -1,8 +1,10 @@
 package com.VoidCallerZ.UltimateCompression;
 
 import com.VoidCallerZ.UltimateCompression.proxy.CommonProxy;
+import com.VoidCallerZ.UltimateCompression.tabs.UltimateCompressionTab;
 import com.VoidCallerZ.UltimateCompression.util.Reference;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -13,7 +15,9 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main 
-{
+{	
+	public static final CreativeTabs ULTIMATE_COMPRESSION_TAB = new UltimateCompressionTab("ultimate_compression_tab");
+	
 	@Instance
 	public static Main m_Instance;
 	

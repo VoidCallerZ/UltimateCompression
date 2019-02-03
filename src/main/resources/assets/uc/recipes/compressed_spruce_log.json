@@ -12,7 +12,8 @@
     {
         "L":
         {
-            "item": "minecraft:spruce_log"
+            "item": "minecraft:log",
+            "data": 1
         }
     },
     

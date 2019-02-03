@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "OOO",
+        "ODO",
+        "OOO"
+    ],
+    
+    "key":
+    {
+        "O":
+        {
+            "item": "uc:double_compressed_obsidian"
+        },
+        "D":
+        {
+            "item": "uc:double_compressed_diamond_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "minecraft:bedrock",
+        "count": 1
+    }
+}

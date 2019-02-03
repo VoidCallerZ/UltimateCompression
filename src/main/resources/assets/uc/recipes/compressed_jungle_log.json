@@ -12,7 +12,8 @@
     {
         "L":
         {
-            "item": "minecraft:jungle_log"
+            "item": "minecraft:log",
+            "data": 3
         }
     },
     

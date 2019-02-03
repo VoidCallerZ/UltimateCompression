@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "OOO",
+        "OOO",
+        "OOO"
+    ],
+    
+    "key":
+    {
+        "O":
+        {
+            "item": "uc:compressed_obsidian_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:double_compressed_obsidian_block",
+        "count": 1
+    }
+}

@@ -12,7 +12,8 @@
     {
         "L":
         {
-            "item": "minecraft:dark_oak_log"
+            "item": "minecraft:log2",
+            "data": 1
         }
     },
     

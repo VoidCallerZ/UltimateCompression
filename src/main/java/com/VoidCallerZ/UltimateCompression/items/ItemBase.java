@@ -23,5 +23,4 @@ public class ItemBase extends Item implements IHasModel
 	{
 		Main.m_Proxy.registerItemRenderer(this, 0, "inventory");
 	}
-
 }
