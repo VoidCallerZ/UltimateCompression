@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "uc:blocks/compressed_iron_block"
+       "all": "uc:compressed/materials/compressed_iron_block"
    }
 }

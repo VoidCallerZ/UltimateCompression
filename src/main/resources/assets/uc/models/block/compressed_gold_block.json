@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "uc:blocks/compressed_gold_block"
+       "all": "uc:compressed/materials/compressed_gold_block"
    }
 }

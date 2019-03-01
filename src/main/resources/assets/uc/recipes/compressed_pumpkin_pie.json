@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:pumpkin_pie"
+    },
+    
+    {
+      "item": "minecraft:pumpkin_pie"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_pumpkin_pie",
+        "count": 1
+    }
+}

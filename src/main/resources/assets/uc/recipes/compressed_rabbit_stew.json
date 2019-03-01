@@ -1,0 +1,34 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:bowl"
+    },
+    
+    {
+      "item": "uc:compressed_carrot"
+    },
+    
+    {
+      "item": "uc:compressed_baked_potato"
+    },
+    
+    {
+      "item": "uc:compressed_cooked_rabbit"
+    },
+    
+    {
+      "item": "minecraft:brown_mushroom"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_rabbit_stew",
+        "count": 1
+    }
+}

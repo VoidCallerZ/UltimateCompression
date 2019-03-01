@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "uc:blocks/double_compressed_spruce_planks"
+       "all": "uc:double_compressed/planks/double_compressed_spruce_planks"
    }
 }

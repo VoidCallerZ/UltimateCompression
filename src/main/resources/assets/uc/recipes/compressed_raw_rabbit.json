@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:rabbit"
+    },
+    
+    {
+      "item": "minecraft:rabbit"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_raw_rabbit",
+        "count": 1
+    }
+}

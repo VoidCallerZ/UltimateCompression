@@ -1,5 +1,6 @@
 //CreativeTabs
 itemGroup.ultimatecompressiontab=Ultimate Compression
+----------------------------------------------------------------------------------------------------
 
 //Blocks of Metal
 tile.compressed_diamond_block.name=Compressed Block of Diamond
@@ -12,10 +13,12 @@ tile.compressed_redstone_block.name=Compressed Block of Redstone
 tile.double_compressed_redstone_block.name=Double Compressed Block of Redstone
 tile.compressed_emerald_block.name=Compressed Block of Emerald
 tile.double_compressed_emerald_block.name=Double Compressed Block of Emerald
+----------------------------------------------------------------------------------------------------
 
 //Obsidian Blocks
 tile.compressed_obsidian_block.name=Compressed Block of Obsidian
 tile.double_compressed_obsidian_block.name=Compressed Block of Obsidian
+----------------------------------------------------------------------------------------------------
 
 //WoodBlocks
 tile.compressed_oak_log.name=Compressed Oak Log
@@ -30,6 +33,7 @@ tile.double_compressed_spruce_log.name=Double Compressed Spruce Log
 tile.double_compressed_jungle_log.name=Double Compressed Jungle Log
 tile.double_compressed_acacia_log.name=Double Compressed Acacia Log
 tile.double_compressed_darkoak_log.name=Double Compressed Dark Oak Log
+----------------------------------------------------------------------------------------------------
 
 //WoodPlanks
 tile.compressed_oak_planks.name=Compressed Oak Planks
@@ -44,3 +48,44 @@ tile.double_compressed_spruce_planks.name=Double Compressed Spruce Planks
 tile.double_compressed_jungle_planks.name=Double Compressed Jungle Planks
 tile.double_compressed_acacia_planks.name=Double Compressed Acacia Planks
 tile.double_compressed_darkoak_planks.name=Double Compressed Darkoak Planks
+----------------------------------------------------------------------------------------------------
+
+//Food
+item.compressed_apple.name=Compressed Apple
+item.compressed_baked_potato.name=Compressed Baked Potato
+item.compressed_beetroot_soup.name=Compressed Beetroot Soup
+item.compressed_beetroot.name=Compressed Beetroot
+item.compressed_bread.name=Compressed Bread
+item.compressed_carrot.name=Compressed Carrot
+item.compressed_clownfish.name=Compressed Clownfish
+item.compressed_cookie.name=Compressed Cookie
+item.compressed_golden_apple.name=Compressed Golden Apple
+item.compressed_golden_carrot.name=Compressed Golden Carrot
+item.compressed_melon_slice.name=Compressed Melon Slice
+item.compressed_mushroom_stew.name=Compressed Mushroom Stew
+item.compressed_poisonous_potato.name=Compressed Poisonous Potato
+item.compressed_potato.name=Compressed Potato
+item.compressed_pufferfish.name=Compressed Pufferfish
+item.compressed_pumpkin_pie.name=Compressed Pumpkin Pie
+item.compressed_rabbit_stew.name=Compressed Rabbit Stew
+item.compressed_rotten_flesh.name=Compressed Rotten Flesh
+item.compressed_spider_eye.name=Compressed Spider Eye
+
+//Cooked
+item.compressed_cooked_chicken.name=Compressed Cooked Chicken
+item.compressed_cooked_cod.name=Compressed Cooked Cod
+item.compressed_cooked_mutton.name=Compressed Cooked Mutton
+item.compressed_cooked_porkchop.name=Compressed Cooked Porkchop
+item.compressed_cooked_rabbit.name=Compressed Cooked Rabbit
+item.compressed_cooked_salmon.name=Compressed Cooked Salmon
+item.compressed_steak.name=Compressed Steak
+
+//Raw
+item.compressed_raw_beef.name=Compressed Raw Beef
+item.compressed_raw_chicken.name=Compressed Raw Chicken
+item.compressed_raw_cod.name=Compressed Raw Cod
+item.compressed_raw_mutton.name=Compressed Raw Mutton
+item.compressed_raw_porkchop.name=Compressed Raw Porkchop
+item.compressed_raw_rabbit.name=Compressed Raw Rabbit
+item.compressed_raw_salmon.name=Compressed Raw Salmon
+----------------------------------------------------------------------------------------------------

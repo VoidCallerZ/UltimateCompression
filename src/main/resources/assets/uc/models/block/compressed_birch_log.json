@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "uc:blocks/compressed_birch_log"
+       "all": "uc:compressed/logs/compressed_birch_log"
    }
 }

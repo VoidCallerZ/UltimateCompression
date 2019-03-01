@@ -1,0 +1,24 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:fish",
+      "data": 1
+    },
+    
+    {
+      "item": "minecraft:fish",
+      "data": 1
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_raw_salmon",
+        "count": 1
+    }
+}

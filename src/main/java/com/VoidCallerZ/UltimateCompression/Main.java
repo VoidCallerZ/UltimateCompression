@@ -1,6 +1,7 @@
 package com.VoidCallerZ.UltimateCompression;
 
 import com.VoidCallerZ.UltimateCompression.proxy.CommonProxy;
+import com.VoidCallerZ.UltimateCompression.tabs.UltimateCompressedFoodTab;
 import com.VoidCallerZ.UltimateCompression.tabs.UltimateCompressionTab;
 import com.VoidCallerZ.UltimateCompression.util.Reference;
 
@@ -17,6 +18,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class Main 
 {	
 	public static final CreativeTabs ULTIMATE_COMPRESSION_TAB = new UltimateCompressionTab("ultimate_compression_tab");
+	public static final CreativeTabs ULTIMATE_COMPRESSED_FOOD_TAB = new UltimateCompressedFoodTab("ultimate_compressed_food_tab");
 	
 	@Instance
 	public static Main m_Instance;

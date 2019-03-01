@@ -1,6 +1,6 @@
 {
    "parent": "block/cube_all",
    "textures": {
-       "all": "uc:blocks/compressed_obsidian_block"
+       "all": "uc:compressed/materials/compressed_obsidian_block"
    }
 }

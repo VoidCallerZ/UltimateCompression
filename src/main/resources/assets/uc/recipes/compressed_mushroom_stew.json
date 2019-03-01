@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:mushroom_stew"
+    },
+    
+    {
+      "item": "minecraft:mushroom_stew"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_mushroom_stew",
+        "count": 1
+    }
+}

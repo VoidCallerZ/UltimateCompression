@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:apple"
+    },
+    
+    {
+      "item": "minecraft:apple"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_apple",
+        "count": 1
+    }
+}
