@@ -1,0 +1,49 @@
+Ultimate Compression Version History Changelog
+----------------------------------------------------------------------------------------------------
+
+Version number: Major.Minor.Build(alpha/beta)
+
+----------------------------------------------------------------------------------------------------
+
+Changelog:
+	1.2.1:
+		- Raw food can now be cooked
+
+	1.2.0:
+		- Added Compressed Food
+		- Reorganized project directory
+		- Minor bug fixes
+
+	1.1.3:
+		- Added Compressed Obsidian Block
+		- Added Double Compressed Obsidian Block
+		
+		- New crafting recipe: 8 Double Compressed Obsidian + 1 Double Compressed Diamond Block --> Bedrock
+		- New crafting recipe: 1 Bedrock --> 1 Double Compressed Diamond Block
+
+	1.1.2:
+		- Added "Ultimate Compression" creative tab
+		- Created "Ultimate Gear Compression" as a optional dependency
+	
+	1.1.0:
+		- Added Compressed Oak Planks
+		- Added Compressed Birch Planks
+		- Added Compressed Spruce Planks
+		- Added Compressed Jungle Planks
+		- Added Compressed Acacia Planks
+		- Added Compressed Dark Oak Planks
+		
+		- Added Double Compressed Oak Planks
+		- Added Double Compressed Birch Planks
+		- Added Double Compressed Spruce Planks
+		- Added Double Compressed Jungle Planks
+		- Added Double Compressed Acacia Planks
+		- Added Double Compressed Dark Oak Planks
+
+	1.0.0b:
+		- Added Compressed Diamond Block
+		- Added Compressed Iron Block
+		- Added Compressed Gold Block
+		- Added Double Compressed Diamond Block
+		- Added Double Compressed Iron Block
+		- Added Double Compressed Gold Block

@@ -1,5 +1,6 @@
 package com.VoidCallerZ.UltimateCompression;
 
+import com.VoidCallerZ.UltimateCompression.init.ModRecipes;
 import com.VoidCallerZ.UltimateCompression.proxy.CommonProxy;
 import com.VoidCallerZ.UltimateCompression.tabs.UltimateCompressedFoodTab;
 import com.VoidCallerZ.UltimateCompression.tabs.UltimateCompressionTab;
@@ -35,7 +36,7 @@ public class Main
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{
-		
+		ModRecipes.init();
 	}
 	
 	@EventHandler
