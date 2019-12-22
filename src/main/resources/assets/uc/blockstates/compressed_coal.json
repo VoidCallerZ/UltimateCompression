@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "uc:compressed_coal" }
+    }
+}

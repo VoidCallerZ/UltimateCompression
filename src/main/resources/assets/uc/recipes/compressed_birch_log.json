@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "LLL",
+        "LLL",
+        "LLL"
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "minecraft:log",
+            "data": 2
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_birch_log",
+        "count": 1
+    }
+}

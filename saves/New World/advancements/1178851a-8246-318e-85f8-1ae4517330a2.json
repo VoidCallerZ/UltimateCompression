@@ -1,0 +1,11 @@
+{
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_boots": "2019-10-24 12:01:56 +0200",
+      "iron_chestplate": "2019-10-24 12:01:56 +0200",
+      "iron_leggings": "2019-10-24 12:01:56 +0200",
+      "iron_helmet": "2019-10-24 12:01:56 +0200"
+    },
+    "done": true
+  }
+}

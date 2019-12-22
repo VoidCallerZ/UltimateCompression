@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "LLL",
+        "LLL",
+        "LLL"
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "minecraft:log2",
+            "data": 0
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_acacia_log",
+        "count": 1
+    }
+}

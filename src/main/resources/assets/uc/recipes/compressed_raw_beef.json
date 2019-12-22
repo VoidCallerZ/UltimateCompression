@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:beef"
+    },
+    
+    {
+      "item": "minecraft:beef"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_raw_beef",
+        "count": 1
+    }
+}

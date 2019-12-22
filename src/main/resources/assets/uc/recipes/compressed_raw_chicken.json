@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:chicken"
+    },
+    
+    {
+      "item": "minecraft:chicken"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_raw_chicken",
+        "count": 1
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "LLL",
+        "LLL",
+        "LLL"
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "minecraft:planks",
+            "data": 5
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_darkoak_planks",
+        "count": 1
+    }
+}

@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+       "all": "uc:compressed/logs/compressed_jungle_log"
+   }
+}

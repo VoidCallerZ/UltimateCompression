@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        " CC",
+        " S ",
+        " S "
+    ],
+    
+    "key": 
+    {
+        "C": 
+        {
+            "item": "uc:compressed_gold_ingot"
+        },
+        
+        "S": 
+        {
+            "item": "minecraft:stick"
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_gold_hoe",
+        "count": 1
+    }
+}

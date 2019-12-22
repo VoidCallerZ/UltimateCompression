@@ -1,0 +1,24 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:golden_apple",
+      "data": 0
+    },
+    
+    {
+      "item": "minecraft:golden_apple",
+      "data": 0
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_golden_apple",
+        "count": 1
+    }
+}

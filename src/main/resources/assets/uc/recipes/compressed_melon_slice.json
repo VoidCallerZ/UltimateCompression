@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:melon"
+    },
+    
+    {
+      "item": "minecraft:melon"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_melon_slice",
+        "count": 1
+    }
+}

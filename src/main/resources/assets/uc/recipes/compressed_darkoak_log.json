@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "LLL",
+        "LLL",
+        "LLL"
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "minecraft:log2",
+            "data": 1
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_darkoak_log",
+        "count": 1
+    }
+}

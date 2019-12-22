@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:bedrock"
+    }
+    
+    ],
+    
+    "result":
+    {
+        "item": "uc:double_compressed_diamond_block",
+        "count": 1
+    }
+}

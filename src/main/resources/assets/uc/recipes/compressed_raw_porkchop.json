@@ -1,0 +1,22 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:porkchop"
+    },
+    
+    {
+      "item": "minecraft:porkchop"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_raw_porkchop",
+        "count": 1
+    }
+}

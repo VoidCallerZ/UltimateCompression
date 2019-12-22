@@ -1,0 +1,29 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "CCC",
+        " S ",
+        " S "
+    ],
+    
+    "key": 
+    {
+        "C": 
+        {
+            "item": "uc:compressed_iron_ingot"
+        },
+        
+        "S": 
+        {
+            "item": "minecraft:stick"
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_iron_pickaxe",
+        "count": 1
+    }
+}

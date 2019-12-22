@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "uc:double_compressed_sand_block" }
+    }
+}

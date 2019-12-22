@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "LLL",
+        "LLL",
+        "LLL"
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "minecraft:planks",
+            "data": 1
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_spruce_planks",
+        "count": 1
+    }
+}

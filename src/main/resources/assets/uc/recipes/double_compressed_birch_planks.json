@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "LLL",
+        "LLL",
+        "LLL"
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "uc:compressed_birch_planks"
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:double_compressed_birch_planks",
+        "count": 1
+    }
+}

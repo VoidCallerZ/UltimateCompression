@@ -1,0 +1,42 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "minecraft:bowl"
+    },
+    
+    {
+      "item": "uc:compressed_beetroot"
+    },
+    
+    {
+      "item": "uc:compressed_beetroot"
+    },
+    
+    {
+      "item": "uc:compressed_beetroot"
+    },
+    
+    {
+      "item": "uc:compressed_beetroot"
+    },
+    
+    {
+      "item": "uc:compressed_beetroot"
+    },
+    
+    {
+      "item": "uc:compressed_beetroot"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "uc:compressed_beetroot_soup",
+        "count": 1
+    }
+}

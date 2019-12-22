@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "GGG",
+        "GGG",
+        "GGG"
+    ],
+    
+    "key":
+    {
+        "G":
+        {
+            "item": "uc:compressed_gold_block"
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:double_compressed_gold_block",
+        "count": 1
+    }
+}

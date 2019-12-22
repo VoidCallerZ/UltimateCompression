@@ -1,0 +1,46 @@
+//CreativeTabs
+itemGroup.ultimatecompressiontab=Ultimate Compression
+
+//Blocks of Metal
+tile.compressed_diamond_block.name=Gecomprimeerde Diamanten Blok
+tile.double_compressed_diamond_block.name=Dubbel Gecomprimeerde Diamanten Blok
+tile.compressed_iron_block.name=Gecomprimeerde Ijzeren Blok
+tile.double_compressed_iron_block.name=Dubbel Gecomprimeerde Ijzeren Blok
+tile.compressed_gold_block.name=Gecomprimeerde Gouden Blok
+tile.double_compressed_gold_block.name=Dubbel Gecomprimeerde Ijzeren Blok
+tile.compressed_redstone_block.name=Gecomprimeerde Redstone Blok
+tile.double_compressed_redstone_block.name=Dubbel Gecomprimeerde Redstone Blok
+tile.compressed_emerald_block.name=Gecomprimeerde Smaragd Blok
+tile.double_compressed_emerald_block.name=Dubbel Gecomprimeerde Smaragd Blok
+
+//Obsidian Blocks
+tile.compressed_obsidian_block.name=Gecomprimeerde Blok van Obsidiaan
+tile.double_compressed_obsidian_block.name=Gecomprimeerde Blok van Obsidiaan
+
+//WoodBlocks
+tile.compressed_oak_log.name=Gecomprimeerde Eiken Stam
+tile.compressed_birch_log.name=Gecomprimeerde Berken Stam
+tile.compressed_spruce_log.name=Gecomprimeerde Dennen Stam
+tile.compressed_jungle_log.name=Gecomprimeerde Jungle Stam
+tile.compressed_acacia_log.name=Gecomprimeerde Acacia Stam
+tile.compressed_darkoak_log.name=Gecomprimeerde Donkere Eik Stam
+tile.double_compressed_oak_log.name=Dubbel Gecomprimeerde Eik Stam
+tile.double_compressed_birch_log.name=Dubbel Gecomprimeerde Berken Stam
+tile.double_compressed_spruce_log.name=Dubbel Gecomprimeerde Dennen Stam
+tile.double_compressed_jungle_log.name=Dubbel Gecomprimeerde Jungle Stam
+tile.double_compressed_acacia_log.name=Dubbel Gecomprimeerde Acacia Stam
+tile.double_compressed_darkoak_log.name=Dubbel Gecomprimeerde Donkere Eik Stam
+
+//WoodPlanken
+tile.compressed_oak_planks.name=Gecomprimeerde Eiken Planken
+tile.compressed_birch_planks.name=Gecomprimeerde Berken Planken
+tile.compressed_spruce_planks.name=Gecomprimeerde Dennen Planken
+tile.compressed_jungle_planks.name=Gecomprimeerde Jungle Planken
+tile.compressed_acacia_planks.name=Gecomprimeerde Acacia Planken
+tile.compressed_darkoak_planks.name=Gecomprimeerde Donkere Eiken Planken
+tile.double_compressed_oak_planks.name=Dubbel Gecomprimeerde Eiken Planken
+tile.double_compressed_birch_planks.name=Dubbel Gecomprimeerde Berken Planken
+tile.double_compressed_spruce_planks.name=Dubbel Gecomprimeerde Dennen Planken
+tile.double_compressed_jungle_planks.name=Dubbel Gecomprimeerde Jungle Planken
+tile.double_compressed_acacia_planks.name=Dubbel Gecomprimeerde Acacia Planken
+tile.double_compressed_darkoak_planks.name=Dubbel Gecomprimeerde Donkere Eiken Planken

@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "CCC",
+        "CCC",
+        "CCC"
+    ],
+    
+    "key":
+    {
+        "C":
+        {
+            "item": "minecraft:coal",
+            "data": 0
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_coal",
+        "count": 1
+    }
+}

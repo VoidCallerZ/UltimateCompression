@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "LLL",
+        "LLL",
+        "LLL"
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "minecraft:planks",
+            "data": 4
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_acacia_planks",
+        "count": 1
+    }
+}

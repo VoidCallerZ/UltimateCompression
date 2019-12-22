@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "LLL",
+        "LLL",
+        "LLL"
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "uc:compressed_spruce_log"
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:double_compressed_spruce_log",
+        "count": 1
+    }
+}

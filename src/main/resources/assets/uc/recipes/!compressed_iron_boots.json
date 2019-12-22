@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "   ",
+        "I I",
+        "I I"
+    ],
+    
+    "key": 
+    {
+        "I": 
+        {
+            "item": "uc:compressed_iron_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_iron_boots",
+        "count": 1
+    }
+}

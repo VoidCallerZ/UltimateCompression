@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "I I",
+        "III",
+        "III"
+    ],
+    
+    "key": 
+    {
+        "I": 
+        {
+            "item": "uc:compressed_gold_ingot"
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_gold_chestplate",
+        "count": 1
+    }
+}

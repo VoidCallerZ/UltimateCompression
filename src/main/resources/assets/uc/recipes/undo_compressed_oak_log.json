@@ -1,0 +1,19 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "uc:compressed_oak_log"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "minecraft:log",
+        "data": 0,
+        "count": 9
+    }
+}

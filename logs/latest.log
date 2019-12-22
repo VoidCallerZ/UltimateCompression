@@ -1,0 +1,147 @@
+[14:11:28] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Rick/.gradle/caches/minecraft/assets, --assetIndex, 1.12, --accessToken{REDACTED}, --version, 1.12.2, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[14:11:28] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:11:28] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:11:28] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[14:11:28] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[14:11:28] [main/INFO] [FML]: Forge Mod Loader version 14.23.5.2846 for Minecraft 1.12.2 loading
+[14:11:28] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_231, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jre1.8.0_231
+[14:11:28] [main/ERROR] [FML]: Apache Maven library folder was not in the format expected. Using default libraries directory.
+[14:11:28] [main/ERROR] [FML]: Full: C:\Users\Rick\.gradle\caches\modules-2\files-2.1\org.apache.maven\maven-artifact\3.5.3\7dc72b6d6d8a6dced3d294ed54c2cc3515ade9f4\maven-artifact-3.5.3.jar
+[14:11:28] [main/ERROR] [FML]: Trimmed: c:/users/rick/.gradle/caches/modules-2/files-2.1/org.apache.maven/maven-artifact/3.5.3/
+[14:11:28] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[14:11:28] [main/INFO] [FML]: Detected deobfuscated environment, loading log configs for colored console logs.
+[14:11:29] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLCorePlugin (net.minecraftforge.fml.relauncher.FMLCorePlugin), we are in deobf and it's a forge core plugin
+[14:11:29] [main/INFO] [FML]: Ignoring missing certificate for coremod FMLForgePlugin (net.minecraftforge.classloading.FMLForgePlugin), we are in deobf and it's a forge core plugin
+[14:11:29] [main/INFO] [FML]: Searching C:\Users\Rick\Desktop\Minecraft Modding\UltimateCompression\.\mods for mods
+[14:11:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.CoremodTweaker
+[14:11:29] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.fml.relauncher.FMLCorePlugin
+[14:11:29] [main/INFO] [GradleStart]: Injecting location in coremod net.minecraftforge.classloading.FMLForgePlugin
+[14:11:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:11:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:11:29] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[14:11:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:11:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[14:11:29] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:11:30] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[14:11:30] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[14:11:30] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[14:11:31] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.gradle.tweakers.AccessTransformerTweaker
+[14:11:31] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:11:31] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[14:11:31] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[14:11:31] [Client thread/INFO] [net.minecraft.client.Minecraft]: Setting user: Player303
+[14:11:34] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[14:11:34] [Client thread/INFO] [net.minecraft.client.Minecraft]: LWJGL Version: 2.9.4
+[14:11:35] [Client thread/INFO] [FML]: -- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 581187424 bytes (554 MB) / 677904384 bytes (646 MB) up to 3808428032 bytes (3632 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 441.41' Renderer: 'GeForce RTX 2060/PCIe/SSE2'
+[14:11:35] [Client thread/INFO] [FML]: MinecraftForge v14.23.5.2846 Initialized
+[14:11:35] [Client thread/INFO] [FML]: Starts to replace vanilla recipe ingredients with ore ingredients.
+[14:11:35] [Client thread/INFO] [FML]: Invalid recipe found with multiple oredict ingredients in the same ingredient...
+[14:11:35] [Client thread/INFO] [FML]: Replaced 1227 ore ingredients
+[14:11:35] [Client thread/INFO] [FML]: Searching C:\Users\Rick\Desktop\Minecraft Modding\UltimateCompression\.\mods for mods
+[14:11:36] [Client thread/INFO] [FML]: Forge Mod Loader has identified 5 mods to load
+[14:11:36] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, uc] at CLIENT
+[14:11:36] [Client thread/INFO] [FML]: Attempting connection with missing mods [minecraft, mcp, FML, forge, uc] at SERVER
+[14:11:37] [Client thread/INFO] [net.minecraft.client.resources.SimpleReloadableResourceManager]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Ultimate Compression
+[14:11:37] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[14:11:37] [Client thread/INFO] [FML]: Found 1168 ObjectHolder annotations
+[14:11:37] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[14:11:37] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[14:11:37] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[14:11:37] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Starting version check at http://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
+[14:11:37] [Client thread/INFO] [FML]: Applying holder lookups
+[14:11:37] [Client thread/INFO] [FML]: Holder lookups applied
+[14:11:37] [Client thread/INFO] [FML]: Applying holder lookups
+[14:11:37] [Client thread/INFO] [FML]: Holder lookups applied
+[14:11:37] [Client thread/INFO] [FML]: Applying holder lookups
+[14:11:37] [Client thread/INFO] [FML]: Holder lookups applied
+[14:11:37] [Client thread/INFO] [FML]: Applying holder lookups
+[14:11:37] [Client thread/INFO] [FML]: Holder lookups applied
+[14:11:37] [Client thread/INFO] [FML]: Injecting itemstacks
+[14:11:37] [Client thread/INFO] [FML]: Itemstack injection complete
+[14:11:37] [Forge Version Check/INFO] [forge.VersionCheck]: [forge] Found status: OUTDATED Target: 14.23.5.2847
+[14:11:37] [Thread-3/INFO] [FML]: Using sync timing. 200 frames of Display.update took 109075100 nanos
+[14:11:40] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Starting up SoundSystem...
+[14:11:40] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: Initializing LWJGL OpenAL
+[14:11:40] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[14:11:40] [Thread-5/INFO] [net.minecraft.client.audio.SoundManager]: OpenAL initialized.
+[14:11:40] [Sound Library Loader/INFO] [net.minecraft.client.audio.SoundManager]: Sound engine started
+[14:11:45] [Client thread/INFO] [FML]: Max texture size: 16384
+[14:11:46] [Client thread/INFO] [net.minecraft.client.renderer.texture.TextureMap]: Created: 512x512 textures-atlas
+[14:11:47] [Client thread/INFO] [FML]: Applying holder lookups
+[14:11:47] [Client thread/INFO] [FML]: Holder lookups applied
+[14:11:47] [Client thread/INFO] [FML]: Injecting itemstacks
+[14:11:47] [Client thread/INFO] [FML]: Itemstack injection complete
+[14:11:47] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 5 mods
+[14:11:47] [Client thread/WARN] [net.minecraft.client.settings.GameSettings]: Skipping bad option: lastServer:
+[14:11:47] [Client thread/INFO] [com.mojang.text2speech.NarratorWindows]: Narrator library for x64 successfully loaded
+[14:11:48] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient]: Could not authorize you against Realms server: Invalid session id
+[14:11:54] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Starting integrated minecraft server version 1.12.2
+[14:11:54] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Generating keypair
+[14:11:54] [Server thread/INFO] [FML]: Injecting existing registry data into this server instance
+[14:11:55] [Server thread/INFO] [FML]: Applying holder lookups
+[14:11:55] [Server thread/INFO] [FML]: Holder lookups applied
+[14:11:55] [Server thread/INFO] [FML]: Loading dimension 0 (New World) (net.minecraft.server.integrated.IntegratedServer@5e66bedd)
+[14:11:55] [Server thread/INFO] [net.minecraft.advancements.AdvancementList]: Loaded 488 advancements
+[14:11:55] [Server thread/INFO] [FML]: Loading dimension -1 (New World) (net.minecraft.server.integrated.IntegratedServer@5e66bedd)
+[14:11:55] [Server thread/INFO] [FML]: Loading dimension 1 (New World) (net.minecraft.server.integrated.IntegratedServer@5e66bedd)
+[14:11:55] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Preparing start region for level 0
+[14:11:56] [Server thread/INFO] [FML]: Unloading dimension -1
+[14:11:56] [Server thread/INFO] [FML]: Unloading dimension 1
+[14:11:56] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Changing view distance to 12, from 10
+[14:11:57] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[14:11:57] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[14:11:57] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 5 mods : minecraft@1.12.2,FML@8.0.99.99,forge@14.23.5.2846,mcp@9.42,uc@1.1.1
+[14:11:57] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[14:11:57] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[14:11:57] [Server thread/INFO] [net.minecraft.server.management.PlayerList]: Player303[local:E:c5d153ea] logged in with entity id 2 at (-256.9534921353259, 56.0, 355.6003452480232)
+[14:11:57] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player303 joined the game
+[14:11:58] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:11:58] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[14:11:58] [pool-2-thread-1/WARN] [com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService]: Couldn't look up profile properties for com.mojang.authlib.GameProfile@769895ba[id=2737bbb4-080a-3670-89c1-780a32c86c5a,name=Player303,properties={},legacy=false]
+com.mojang.authlib.exceptions.AuthenticationException: The client has sent too many requests within a certain amount of time
+	at com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService.makeRequest(YggdrasilAuthenticationService.java:79) ~[YggdrasilAuthenticationService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillGameProfile(YggdrasilMinecraftSessionService.java:180) [YggdrasilMinecraftSessionService.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:60) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService$1.load(YggdrasilMinecraftSessionService.java:57) [YggdrasilMinecraftSessionService$1.class:?]
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3716) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2424) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2298) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2211) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4154) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:4158) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:5147) [guava-21.0.jar:?]
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:5153) [guava-21.0.jar:?]
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.fillProfileProperties(YggdrasilMinecraftSessionService.java:170) [YggdrasilMinecraftSessionService.class:?]
+	at net.minecraft.client.Minecraft.getProfileProperties(Minecraft.java:3182) [Minecraft.class:?]
+	at net.minecraft.client.resources.SkinManager$3.run(SkinManager.java:138) [SkinManager$3.class:?]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [?:1.8.0_231]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_231]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_231]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_231]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_231]
+[14:12:15] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer]: Saving and pausing game...
+[14:12:15] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[14:12:16] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Stopping server
+[14:12:16] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving players
+[14:12:16] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Player303 lost connection: Disconnected
+[14:12:16] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Player303 left the game
+[14:12:16] [Server thread/INFO] [net.minecraft.network.NetHandlerPlayServer]: Stopping singleplayer server as player logged out
+[14:12:16] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving worlds
+[14:12:16] [Server thread/INFO] [net.minecraft.server.MinecraftServer]: Saving chunks for level 'New World'/overworld
+[14:12:16] [Server thread/INFO] [FML]: Unloading dimension 0
+[14:12:16] [Server thread/INFO] [FML]: Applying holder lookups
+[14:12:16] [Server thread/INFO] [FML]: Holder lookups applied
+[14:12:18] [Client thread/INFO] [net.minecraft.client.Minecraft]: Stopping!
+[14:12:18] [Client thread/INFO] [net.minecraft.client.audio.SoundManager]: SoundSystem shutting down...
+[14:12:18] [Client thread/WARN] [net.minecraft.client.audio.SoundManager]: Author: Paul Lamb, www.paulscode.com

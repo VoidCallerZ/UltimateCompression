@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "LLL",
+        "LLL",
+        "LLL"
+    ],
+    
+    "key":
+    {
+        "L":
+        {
+            "item": "minecraft:log",
+            "data": 3
+        }
+    },
+    
+    "result":
+    {
+        "item": "uc:compressed_jungle_log",
+        "count": 1
+    }
+}

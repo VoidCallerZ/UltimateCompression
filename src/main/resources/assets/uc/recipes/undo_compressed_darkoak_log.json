@@ -1,0 +1,19 @@
+{ 
+    "type": "minecraft:crafting_shapeless",
+
+    "ingredients": 
+    [
+
+    {
+      "item": "uc:compressed_darkoak_log"
+    }
+    
+    ],
+
+    "result": 
+    {
+        "item": "minecraft:log2",
+        "data": 1,
+        "count": 9
+    }
+}

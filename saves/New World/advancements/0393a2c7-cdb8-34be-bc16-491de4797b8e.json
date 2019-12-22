@@ -1,0 +1,17 @@
+{
+  "minecraft:story/obtain_armor": {
+    "criteria": {
+      "iron_boots": "2019-10-24 14:14:12 +0200",
+      "iron_chestplate": "2019-10-24 14:14:12 +0200",
+      "iron_leggings": "2019-10-24 14:14:12 +0200",
+      "iron_helmet": "2019-10-24 14:14:12 +0200"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "desert": "2019-10-24 14:14:12 +0200"
+    },
+    "done": false
+  }
+}
