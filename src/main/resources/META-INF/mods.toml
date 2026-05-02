@@ -1,0 +1,33 @@
+# See https://docs.minecraftforge.net/en/1.21.x/gettingstarted/modfiles/#modstoml
+
+modLoader="javafml"
+loaderVersion="[52,)"
+license="MIT License"
+issueTrackerURL="https://github.com/VoidCallerZ/UltimateCompression/issues"
+
+[[mods]]
+modId="uc"
+version="${file.jarVersion}"
+displayName="Ultimate Compression"
+displayURL="https://github.com/VoidCallerZ/UltimateCompression"
+logoFile="uc_logo.png"
+authors="VoidCallerZ"
+credits="VoidCallerZ"
+
+description='''Ultimate Compression adds compressed variants of common blocks and materials.
+Compress 9 blocks into 1 in a 3x3 crafting grid, and compress again for a double compressed variant — storing up to 81 blocks in a single block.
+All compressed blocks can be decompressed back into their original form at any time.'''
+
+[[dependencies.uc]]
+    modId="forge"
+    mandatory=true
+    versionRange="[52,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.uc]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21.1,1.22)"
+    ordering="NONE"
+    side="BOTH"

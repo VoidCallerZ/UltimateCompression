@@ -1,0 +1,8 @@
+﻿{
+    "type": "minecraft:crafting_shaped",
+    "pattern": ["MMM", "M M"],
+    "key": {
+        "M": { "item": "uc:compressed_gold_ingot" }
+    },
+    "result": { "id": "uc:compressed_gold_helmet", "count": 1 }
+}

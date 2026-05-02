@@ -1,0 +1,8 @@
+﻿{
+    "type": "minecraft:crafting_shaped",
+    "pattern": ["M M", "MMM", "MMM"],
+    "key": {
+        "M": { "item": "uc:compressed_netherite_ingot" }
+    },
+    "result": { "id": "uc:compressed_netherite_chestplate", "count": 1 }
+}

@@ -1,0 +1,9 @@
+﻿{
+    "type": "minecraft:crafting_shaped",
+    "pattern": ["MM", " S", " S"],
+    "key": {
+        "M": { "item": "uc:compressed_iron_ingot" },
+        "S": { "item": "uc:compressed_stick" }
+    },
+    "result": { "id": "uc:compressed_iron_hoe", "count": 1 }
+}

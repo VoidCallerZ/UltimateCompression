@@ -1,0 +1,8 @@
+﻿{
+    "type": "minecraft:crafting_shaped",
+    "pattern": ["M M", "MMM", "MMM"],
+    "key": {
+        "M": { "item": "uc:compressed_leather" }
+    },
+    "result": { "id": "uc:compressed_leather_chestplate", "count": 1 }
+}
