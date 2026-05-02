@@ -1,6 +1,8 @@
 package com.voidcallerz.uc;
 
+import com.voidcallerz.uc.registry.UCArmorMaterials;
 import com.voidcallerz.uc.registry.UCBlocks;
+import com.voidcallerz.uc.registry.UCEquipment;
 import com.voidcallerz.uc.registry.UCItemRegistry;
 import com.voidcallerz.uc.registry.UCItems;
 import com.voidcallerz.uc.registry.UCOres;
@@ -24,6 +26,9 @@ public class UltimateCompression {
 
         UCOres.BLOCKS.register(modEventBus);
         UCOres.ITEMS.register(modEventBus);
+
+        UCArmorMaterials.ARMOR_MATERIALS.register(modEventBus);
+        UCEquipment.ITEMS.register(modEventBus);
 
         UCItems.CREATIVE_TABS.register(modEventBus);
 

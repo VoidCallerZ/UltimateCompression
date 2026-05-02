@@ -1,9 +1,20 @@
-﻿{
+{
     "type": "minecraft:crafting_shaped",
-    "pattern": ["M", "M", "S"],
+    "pattern": [
+        "#",
+        "#",
+        "S"
+    ],
     "key": {
-        "M": { "item": "uc:compressed_gold_ingot" },
-        "S": { "item": "uc:compressed_stick" }
+        "#": {
+            "item": "uc:compressed_gold_ingot"
+        },
+        "S": {
+            "item": "uc:compressed_stick"
+        }
     },
-    "result": { "id": "uc:compressed_gold_sword", "count": 1 }
+    "result": {
+        "id": "uc:compressed_gold_sword",
+        "count": 1
+    }
 }

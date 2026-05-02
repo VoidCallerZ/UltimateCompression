@@ -93,7 +93,6 @@ VANILLA_CONFLICTS = {
     "iron_ingot", "gold_ingot", "copper_ingot", "diamond", "emerald",
     "lapis_lazuli", "redstone", "coal", "netherite_ingot",
     "iron_nugget", "gold_nugget", "quartz", "bone", "string",
-    # Raw materials also have vanilla 9x3x3 -> raw block recipes
     "raw_iron", "raw_gold", "raw_copper",
 }
 
@@ -452,32 +451,29 @@ def generate_loot_tables(resource_path: Path) -> int:
 
 def generate_lang(resource_path: Path) -> int:
     out_path = resource_path / "assets" / MOD_ID / "lang" / "en_us.json"
-
-    # Load existing lang file so entries from generate_ores.py are preserved
     if out_path.exists():
         with open(out_path, "r", encoding="utf-8") as f:
             entries = json.load(f)
     else:
         entries = {}
-
-    # Always set the tab name
     entries[f"itemGroup.{MOD_ID}"] = TAB_DISPLAY_NAME
-
-    # Block display names
     for material in ALL_MATERIALS:
         for tier_index in range(len(TIER_PREFIXES)):
             key   = f"block.{MOD_ID}.{registry_name(material, tier_index)}"
             value = f"{TIER_LABELS[tier_index]} {to_title_case(material)}"
             entries[key] = value
-
-    # Standalone item display names
     for entry in COMPRESSED_ITEMS:
         key   = f"item.{MOD_ID}.{entry['name']}"
         value = to_title_case(entry["name"])
         entries[key] = value
-
     entries[f"item.{MOD_ID}.compression_catalyst"] = "Compression Catalyst"
-
+    # Add equipment lang entries
+    for mat, label in EQUIPMENT_MATERIALS_TOOLS:
+        for tool, tool_label in TOOL_TYPES:
+            entries[f"item.{MOD_ID}.compressed_{mat}_{tool}"] = f"Compressed {label} {tool_label}"
+    for mat, label in EQUIPMENT_MATERIALS_ARMOR:
+        for piece, piece_label in ARMOR_TYPES:
+            entries[f"item.{MOD_ID}.compressed_{mat}_{piece}"] = f"Compressed {label} {piece_label}"
     write_json(out_path, entries)
     return len(entries)
 
@@ -524,6 +520,135 @@ def generate_block_tags(resource_path: Path) -> int:
 
     return 4
 
+
+# =============================================================================
+# EQUIPMENT CONFIG
+# =============================================================================
+
+EQUIPMENT_MATERIALS_TOOLS = [
+    ("wood",      "Wood"),
+    ("stone",     "Stone"),
+    ("iron",      "Iron"),
+    ("gold",      "Gold"),
+    ("diamond",   "Diamond"),
+    ("netherite", "Netherite"),
+]
+
+EQUIPMENT_MATERIALS_ARMOR = [
+    ("iron",      "Iron"),
+    ("gold",      "Gold"),
+    ("diamond",   "Diamond"),
+    ("netherite", "Netherite"),
+]
+
+TOOL_TYPES = [
+    ("sword",   "Sword"),
+    ("pickaxe", "Pickaxe"),
+    ("axe",     "Axe"),
+    ("shovel",  "Shovel"),
+    ("hoe",     "Hoe"),
+]
+
+ARMOR_TYPES = [
+    ("helmet",     "Helmet"),
+    ("chestplate", "Chestplate"),
+    ("leggings",   "Leggings"),
+    ("boots",      "Boots"),
+]
+
+# Crafting ingredient for each tool material
+TOOL_INGREDIENTS = {
+    "wood":      "uc:compressed_oak_planks",
+    "stone":     "uc:compressed_cobblestone",
+    "iron":      "uc:compressed_iron_ingot",
+    "gold":      "uc:compressed_gold_ingot",
+    "diamond":   "uc:compressed_diamond",
+    "netherite": "uc:compressed_netherite_ingot",
+}
+
+ARMOR_INGREDIENTS = {
+    "iron":      "uc:compressed_iron_ingot",
+    "gold":      "uc:compressed_gold_ingot",
+    "diamond":   "uc:compressed_diamond",
+    "netherite": "uc:compressed_netherite_ingot",
+}
+
+# Vanilla shaped patterns for each tool type
+TOOL_PATTERNS = {
+    "sword":   ["#", "#", "S"],   # S = stick
+    "pickaxe": ["###", " S ", " S "],
+    "axe":     ["## ", "#S ", " S "],
+    "shovel":  ["#", "S", "S"],
+    "hoe":     ["##", " S", " S"],
+}
+
+ARMOR_PATTERNS = {
+    "helmet":     ["###", "# #", "   "],
+    "chestplate": ["# #", "###", "###"],
+    "leggings":   ["###", "# #", "# #"],
+    "boots":      ["   ", "# #", "# #"],
+}
+
+
+def generate_equipment_recipes(resource_path: Path) -> int:
+    out_base = resource_path / "data" / MOD_ID / "recipe"
+    count = 0
+    stick_id = f"{MOD_ID}:compressed_stick"
+
+    for mat, _ in EQUIPMENT_MATERIALS_TOOLS:
+        mat_id = TOOL_INGREDIENTS[mat]
+        for tool, _ in TOOL_TYPES:
+            name    = f"compressed_{mat}_{tool}"
+            pattern = TOOL_PATTERNS[tool]
+            # Build key — tools use # for material and S for stick
+            key = {"#": {"item": mat_id}}
+            if any("S" in row for row in pattern):
+                key["S"] = {"item": stick_id}
+            write_json(out_base / f"{name}.json", {
+                "type": "minecraft:crafting_shaped",
+                "pattern": pattern,
+                "key": key,
+                "result": {"id": f"{MOD_ID}:{name}", "count": 1}
+            })
+            count += 1
+
+    for mat, _ in EQUIPMENT_MATERIALS_ARMOR:
+        mat_id = ARMOR_INGREDIENTS[mat]
+        for piece, _ in ARMOR_TYPES:
+            name    = f"compressed_{mat}_{piece}"
+            pattern = ARMOR_PATTERNS[piece]
+            write_json(out_base / f"{name}.json", {
+                "type": "minecraft:crafting_shaped",
+                "pattern": pattern,
+                "key": {"#": {"item": mat_id}},
+                "result": {"id": f"{MOD_ID}:{name}", "count": 1}
+            })
+            count += 1
+
+    return count
+
+
+def generate_equipment_item_models(resource_path: Path) -> int:
+    out_base = resource_path / "assets" / MOD_ID / "models" / "item"
+    count = 0
+    for mat, _ in EQUIPMENT_MATERIALS_TOOLS:
+        for tool, _ in TOOL_TYPES:
+            name = f"compressed_{mat}_{tool}"
+            write_json(out_base / f"{name}.json", {
+                "parent": "minecraft:item/handheld",
+                "textures": {"layer0": f"{MOD_ID}:item/{name}"}
+            })
+            count += 1
+    for mat, _ in EQUIPMENT_MATERIALS_ARMOR:
+        for piece, _ in ARMOR_TYPES:
+            name = f"compressed_{mat}_{piece}"
+            write_json(out_base / f"{name}.json", {
+                "parent": "minecraft:item/generated",
+                "textures": {"layer0": f"{MOD_ID}:item/{name}"}
+            })
+            count += 1
+    return count
+
 # =============================================================================
 # SUMMARY & MAIN
 # =============================================================================
@@ -568,6 +693,8 @@ def main():
         return
 
     print("\n[3/3] Generating...")
+    equip_rec = generate_equipment_recipes(resource_path)
+    equip_im  = generate_equipment_item_models(resource_path)
     tags = generate_block_tags(resource_path)
     bs   = generate_blockstates(resource_path)
     bm   = generate_block_models(resource_path)
@@ -581,6 +708,8 @@ def main():
     print(f"""
   Done!
   ─────────────────────────────────────────
+  Equipment recipes        : {equip_rec}
+  Equipment item models    : {equip_im}
   Block tag files          : {tags} (additive)
   Blockstate JSONs         : {bs}
   Block model JSONs        : {bm}

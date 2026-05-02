@@ -57,6 +57,8 @@ public class UCItems {
                     output.accept(UCItemRegistry.UC_COMPRESSOR.get());
                     // Compressed ore blocks
                     UCOres.ALL_ORE_BLOCKS.values().forEach(b -> output.accept(b.get()));
+                    //Tools and armor
+                    UCEquipment.ALL_EQUIPMENT.values().forEach(item -> output.accept(item.get()));
                 })
                 .build()
         );

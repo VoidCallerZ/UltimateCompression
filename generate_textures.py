@@ -1,12 +1,12 @@
 """
-Ultimate Compression — Texture Generator v4
+Ultimate Compression — Texture Generator v5
 =============================================
 Extracts vanilla textures from your Minecraft jar, applies per-tier
 darkening + saturation + border effects, and writes them into your mod's
 resource folder. Also generates a preview sheet for blocks and items.
 
 Changelog:
-  v4 — Added compressed ore texture extraction and writing.
+  v5 — Added tool item textures and armor layer textures.
 
 Requirements:
     pip install Pillow
@@ -36,7 +36,7 @@ BORDER_STRENGTH  = 0.72
 
 # Block materials — must match UCBlocks.java
 MATERIALS = [
-    "stone", "cobblestone", "dirt", "sand", "gravel",
+    "stone", "cobblestone", "dirt", "grass_block", "sand", "gravel",
     "netherrack", "soul_sand", "soul_soil", "blackstone", "deepslate",
     "calcite", "tuff", "obsidian",
     "iron_block", "gold_block", "diamond_block", "emerald_block",
@@ -45,29 +45,15 @@ MATERIALS = [
     "raw_copper_block",
     "oak_log", "spruce_log", "birch_log", "jungle_log", "acacia_log",
     "dark_oak_log", "mangrove_log", "cherry_log", "bamboo_block",
-    "crimson_stem", "warped_stem",
     "oak_planks", "spruce_planks", "birch_planks", "jungle_planks",
     "acacia_planks", "dark_oak_planks", "mangrove_planks", "cherry_planks",
-    "crimson_planks", "warped_planks", 
-    "black_wool", "white_wool", "red_wool", "green_wool", "blue_wool", "yellow_wool", 
-    "purple_wool", "orange_wool", "cyan_wool", "light_gray_wool", "gray_wool", "pink_wool", 
-    "magenta_wool", "brown_wool", "light_blue_wool", "lime_wool", "black_concrete_powder", 
-    "white_concrete_powder", "red_concrete_powder", "green_concrete_powder", "blue_concrete_powder", 
-    "yellow_concrete_powder", "purple_concrete_powder", "orange_concrete_powder", "cyan_concrete_powder", 
-    "light_gray_concrete_powder", "gray_concrete_powder", "pink_concrete_powder", "magenta_concrete_powder", 
-    "brown_concrete_powder", "light_blue_concrete_powder", "lime_concrete_powder", "purple_concrete_powder",
-    "black_concrete", "white_concrete", "red_concrete", "green_concrete", "blue_concrete", "yellow_concrete",
-    "purple_concrete", "orange_concrete", "cyan_concrete", "light_gray_concrete", "gray_concrete", 
-    "pink_concrete", "magenta_concrete", "brown_concrete", "light_blue_concrete", "lime_concrete", 
-    "purple_concrete", "red_sand", "andesite", "diorite", "granite", "cobbled_deepslate"
 ]
 
-# Override which jar texture to use for a block's SIDE face
 TEXTURE_OVERRIDES = {
+    "grass_block":  "grass_block_side",
     "bamboo_block": "bamboo_planks",
 }
 
-# Blocks that also need a top texture extracted
 LOG_TOP_TEXTURES = {
     "oak_log":      "oak_log_top",
     "spruce_log":   "spruce_log_top",
@@ -78,11 +64,9 @@ LOG_TOP_TEXTURES = {
     "mangrove_log": "mangrove_log_top",
     "cherry_log":   "cherry_log_top",
     "bamboo_block": "bamboo_planks",
-    "crimson_stem": "crimson_stem_top",
-    "warped_stem":  "warped_stem_top",
+    "grass_block":  "grass_block_top",
 }
 
-# Standalone compressed items — maps item registry name -> vanilla item texture stem
 COMPRESSED_ITEM_TEXTURES = {
     "compressed_raw_iron":        "raw_iron",
     "compressed_raw_gold":        "raw_gold",
@@ -109,17 +93,58 @@ COMPRESSED_ITEM_TEXTURES = {
     "compressed_blaze_rod":       "blaze_rod",
 }
 
-# Compressed ore textures — maps ore registry name -> vanilla deepslate ore texture stem
-# We use deepslate variants since these only spawn at deepslate depth
-COMPRESSED_ORE_TEXTURES = {
-    "compressed_coal_ore":     "deepslate_coal_ore",
-    "compressed_iron_ore":     "deepslate_iron_ore",
-    "compressed_gold_ore":     "deepslate_gold_ore",
-    "compressed_copper_ore":   "deepslate_copper_ore",
-    "compressed_diamond_ore":  "deepslate_diamond_ore",
-    "compressed_emerald_ore":  "deepslate_emerald_ore",
-    "compressed_lapis_ore":    "deepslate_lapis_ore",
-    "compressed_redstone_ore": "deepslate_redstone_ore",
+# -------------------------------------------------------------------------
+# TOOL ITEM TEXTURES
+# Maps compressed tool item name -> vanilla item texture stem
+# Tool types: sword, pickaxe, axe, shovel, hoe
+# -------------------------------------------------------------------------
+TOOL_MATERIALS = {
+    "wood":      "wooden",
+    "stone":     "stone",
+    "iron":      "iron",
+    "gold":      "golden",
+    "diamond":   "diamond",
+    "netherite": "netherite",
+}
+
+TOOL_TYPES = ["sword", "pickaxe", "axe", "shovel", "hoe"]
+
+# Build the full tool texture map: compressed_iron_sword -> iron_sword etc.
+COMPRESSED_TOOL_TEXTURES = {}
+for mat, vanilla_mat in TOOL_MATERIALS.items():
+    for tool in TOOL_TYPES:
+        COMPRESSED_TOOL_TEXTURES[f"compressed_{mat}_{tool}"] = f"{vanilla_mat}_{tool}"
+
+# -------------------------------------------------------------------------
+# ARMOR ITEM TEXTURES
+# Maps compressed armor item name -> vanilla item texture stem
+# -------------------------------------------------------------------------
+ARMOR_MATERIALS = {
+    "iron":      "iron",
+    "gold":      "golden",
+    "diamond":   "diamond",
+    "netherite": "netherite",
+}
+
+ARMOR_PIECES = ["helmet", "chestplate", "leggings", "boots"]
+
+COMPRESSED_ARMOR_ITEM_TEXTURES = {}
+for mat, vanilla_mat in ARMOR_MATERIALS.items():
+    for piece in ARMOR_PIECES:
+        COMPRESSED_ARMOR_ITEM_TEXTURES[f"compressed_{mat}_{piece}"] = f"{vanilla_mat}_{piece}"
+
+# -------------------------------------------------------------------------
+# ARMOR LAYER TEXTURES
+# These are the textures shown ON the player body when wearing armor.
+# Vanilla stores them in assets/minecraft/textures/models/armor/
+# layer_1 = body (helmet, chestplate, boots)
+# layer_2 = leggings
+# -------------------------------------------------------------------------
+ARMOR_LAYER_SOURCES = {
+    "iron":      "iron",
+    "gold":      "gold",
+    "diamond":   "diamond",
+    "netherite": "netherite",
 }
 
 # =============================================================================
@@ -170,20 +195,19 @@ def extract_from_jar(jar, folder: str, stem: str):
         return None
     with jar.open(path) as f:
         img = Image.open(f).convert("RGBA")
-        if img.height > img.width:
+        # Don't crop armor layer textures — they're intentionally tall
+        if folder != "models/armor" and img.height > img.width:
             img = img.crop((0, 0, img.width, img.width))
         return img.copy()
 
 
 def extract_all_textures(jar_path):
-    """
-    Extract all textures needed.
-    Returns (side_textures, top_textures, item_textures, ore_textures).
-    """
-    side_textures = {}
-    top_textures  = {}
-    item_textures = {}
-    ore_textures  = {}
+    side_textures  = {}
+    top_textures   = {}
+    item_textures  = {}
+    tool_textures  = {}
+    armor_item_textures  = {}
+    armor_layer_textures = {}
 
     with zipfile.ZipFile(jar_path, "r") as jar:
 
@@ -215,16 +239,36 @@ def extract_all_textures(jar_path):
             else:
                 print(f"    x {comp_name} -- not found, skipping")
 
-        print("\n  Ore textures:")
-        for comp_name, vanilla_stem in COMPRESSED_ORE_TEXTURES.items():
-            img = extract_from_jar(jar, "block", vanilla_stem)
+        print("\n  Tool textures:")
+        for comp_name, vanilla_stem in COMPRESSED_TOOL_TEXTURES.items():
+            img = extract_from_jar(jar, "item", vanilla_stem)
             if img:
-                ore_textures[comp_name] = img
+                tool_textures[comp_name] = img
                 print(f"    v {comp_name}")
             else:
                 print(f"    x {comp_name} -- not found, skipping")
 
-    return side_textures, top_textures, item_textures, ore_textures
+        print("\n  Armor item textures:")
+        for comp_name, vanilla_stem in COMPRESSED_ARMOR_ITEM_TEXTURES.items():
+            img = extract_from_jar(jar, "item", vanilla_stem)
+            if img:
+                armor_item_textures[comp_name] = img
+                print(f"    v {comp_name}")
+            else:
+                print(f"    x {comp_name} -- not found, skipping")
+
+        print("\n  Armor layer textures:")
+        for mat, vanilla_mat in ARMOR_LAYER_SOURCES.items():
+            for layer in [1, 2]:
+                stem = f"{vanilla_mat}_layer_{layer}"
+                img  = extract_from_jar(jar, "models/armor", stem)
+                if img:
+                    armor_layer_textures[f"compressed_{mat}_layer_{layer}"] = img
+                    print(f"    v compressed_{mat}_layer_{layer}")
+                else:
+                    print(f"    x compressed_{mat}_layer_{layer} -- not found, skipping")
+
+    return side_textures, top_textures, item_textures, tool_textures, armor_item_textures, armor_layer_textures
 
 # =============================================================================
 # TEXTURE PROCESSING
@@ -257,6 +301,21 @@ def apply_tier_effects(base_image, tier_index):
     result.putalpha(a)
     return apply_border_darkening(result)
 
+
+def apply_effects_no_border(base_image, tier_index):
+    """
+    Apply brightness/saturation without the border darkening effect.
+    Used for armor layer textures — the border effect looks wrong on the
+    large non-square armor layout textures.
+    """
+    r, g, b, a = base_image.split()
+    rgb = Image.merge("RGB", (r, g, b))
+    rgb = ImageEnhance.Color(rgb).enhance(TIER_SATURATION[tier_index])
+    rgb = ImageEnhance.Brightness(rgb).enhance(TIER_BRIGHTNESS[tier_index])
+    result = rgb.convert("RGBA")
+    result.putalpha(a)
+    return result
+
 # =============================================================================
 # OUTPUT
 # =============================================================================
@@ -275,7 +334,6 @@ def write_block_textures(side_textures, top_textures, resource_path):
 
 
 def write_item_textures(item_textures, resource_path, jar_path):
-    """Write processed item textures."""
     out_base = resource_path / "assets" / MOD_ID / "textures" / "item"
     out_base.mkdir(parents=True, exist_ok=True)
     for name, base_img in item_textures.items():
@@ -284,13 +342,36 @@ def write_item_textures(item_textures, resource_path, jar_path):
         print(f"    v {name}")
 
 
-def write_ore_textures(ore_textures, resource_path):
-    """Write compressed ore textures to textures/block/."""
-    out_base = resource_path / "assets" / MOD_ID / "textures" / "block"
+def write_tool_textures(tool_textures, resource_path):
+    """Tool item textures — same darkening as other items, no border."""
+    out_base = resource_path / "assets" / MOD_ID / "textures" / "item"
     out_base.mkdir(parents=True, exist_ok=True)
-    for name, base_img in ore_textures.items():
-        # Ores use tier 0 darkening to look distinct from vanilla deepslate ores
+    for name, base_img in tool_textures.items():
         processed = apply_tier_effects(base_img, 0)
+        processed.save(out_base / f"{name}.png")
+        print(f"    v {name}")
+
+
+def write_armor_item_textures(armor_item_textures, resource_path):
+    """Armor item textures (shown in inventory)."""
+    out_base = resource_path / "assets" / MOD_ID / "textures" / "item"
+    out_base.mkdir(parents=True, exist_ok=True)
+    for name, base_img in armor_item_textures.items():
+        processed = apply_tier_effects(base_img, 0)
+        processed.save(out_base / f"{name}.png")
+        print(f"    v {name}")
+
+
+def write_armor_layer_textures(armor_layer_textures, resource_path):
+    """
+    Armor layer textures (shown on the player body).
+    Written to assets/uc/textures/models/armor/
+    No border darkening — the large layout texture looks wrong with it.
+    """
+    out_base = resource_path / "assets" / MOD_ID / "textures" / "models" / "armor"
+    out_base.mkdir(parents=True, exist_ok=True)
+    for name, base_img in armor_layer_textures.items():
+        processed = apply_effects_no_border(base_img, 0)
         processed.save(out_base / f"{name}.png")
         print(f"    v {name}")
 
@@ -302,7 +383,7 @@ def generate_preview(side_textures, top_textures, item_textures, out_path):
     print("\n  Generating preview sheet...")
 
     CELL, PAD, LABEL = 64, 8, 180
-    HEADER = 30
+    HEADER   = 30
     SEPARATOR = CELL + PAD
 
     block_rows = len(side_textures) + len(top_textures)
@@ -357,7 +438,7 @@ def generate_preview(side_textures, top_textures, item_textures, out_path):
 
 def main():
     print("=" * 60)
-    print("  Ultimate Compression -- Texture Generator v4")
+    print("  Ultimate Compression -- Texture Generator v5")
     print("=" * 60)
 
     print("\n[1/4] Locating paths...")
@@ -366,21 +447,28 @@ def main():
     print(f"  Mod resources: {resource_path}")
 
     print("\n[2/4] Extracting vanilla textures...")
-    side_textures, top_textures, item_textures, ore_textures = extract_all_textures(jar_path)
-    print(f"\n  {len(side_textures)} block, "
-          f"{len(top_textures)} top, "
-          f"{len(item_textures)} item, "
-          f"{len(ore_textures)} ore textures extracted.")
+    (side_textures, top_textures, item_textures,
+     tool_textures, armor_item_textures, armor_layer_textures) = extract_all_textures(jar_path)
+    print(f"\n  {len(side_textures)} block, {len(top_textures)} top, "
+          f"{len(item_textures)} item, {len(tool_textures)} tool, "
+          f"{len(armor_item_textures)} armor item, "
+          f"{len(armor_layer_textures)} armor layer textures extracted.")
 
-    print("\n[3/4] Generating preview...")
+    print("\n[3/4] Generating preview (blocks + items)...")
     preview_path = Path(__file__).parent / "texture_preview.png"
     generate_preview(side_textures, top_textures, item_textures, preview_path)
 
-    block_files = (len(side_textures) + len(top_textures)) * len(TIER_PREFIXES)
-    item_files  = len(item_textures)
-    ore_files   = len(ore_textures)
-    print(f"\n[4/4] Ready to write "
-          f"{block_files} block + {item_files} item + {ore_files} ore textures.")
+    block_files       = (len(side_textures) + len(top_textures)) * len(TIER_PREFIXES)
+    item_files        = len(item_textures)
+    tool_files        = len(tool_textures)
+    armor_item_files  = len(armor_item_textures)
+    armor_layer_files = len(armor_layer_textures)
+    total             = block_files + item_files + tool_files + armor_item_files + armor_layer_files
+
+    print(f"\n[4/4] Ready to write {total} textures total:")
+    print(f"  {block_files} block  |  {item_files} item  |  {tool_files} tool  "
+          f"|  {armor_item_files} armor item  |  {armor_layer_files} armor layer")
+
     answer = input("\n  Check texture_preview.png first.\n  Write textures now? [y/N]: ").strip().lower()
 
     if answer == "y":
@@ -388,9 +476,13 @@ def main():
         write_block_textures(side_textures, top_textures, resource_path)
         print("\n  Writing item textures...")
         write_item_textures(item_textures, resource_path, jar_path)
-        print("\n  Writing ore textures...")
-        write_ore_textures(ore_textures, resource_path)
-        print(f"\n  Done! {block_files + item_files + ore_files} textures written.")
+        print("\n  Writing tool textures...")
+        write_tool_textures(tool_textures, resource_path)
+        print("\n  Writing armor item textures...")
+        write_armor_item_textures(armor_item_textures, resource_path)
+        print("\n  Writing armor layer textures...")
+        write_armor_layer_textures(armor_layer_textures, resource_path)
+        print(f"\n  Done! {total} textures written.")
     else:
         print("\n  Aborted -- no files written.")
 

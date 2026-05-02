@@ -1,8 +1,17 @@
-﻿{
+{
     "type": "minecraft:crafting_shaped",
-    "pattern": ["MMM", "M M"],
+    "pattern": [
+        "###",
+        "# #",
+        "   "
+    ],
     "key": {
-        "M": { "item": "uc:compressed_diamond" }
+        "#": {
+            "item": "uc:compressed_diamond"
+        }
     },
-    "result": { "id": "uc:compressed_diamond_helmet", "count": 1 }
+    "result": {
+        "id": "uc:compressed_diamond_helmet",
+        "count": 1
+    }
 }

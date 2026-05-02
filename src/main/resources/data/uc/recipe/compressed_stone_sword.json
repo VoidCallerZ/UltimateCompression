@@ -1,9 +1,20 @@
-﻿{
+{
     "type": "minecraft:crafting_shaped",
-    "pattern": ["M", "M", "S"],
+    "pattern": [
+        "#",
+        "#",
+        "S"
+    ],
     "key": {
-        "M": { "item": "uc:compressed_cobblestone" },
-        "S": { "item": "uc:compressed_stick" }
+        "#": {
+            "item": "uc:compressed_cobblestone"
+        },
+        "S": {
+            "item": "uc:compressed_stick"
+        }
     },
-    "result": { "id": "uc:compressed_stone_sword", "count": 1 }
+    "result": {
+        "id": "uc:compressed_stone_sword",
+        "count": 1
+    }
 }

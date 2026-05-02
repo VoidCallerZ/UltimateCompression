@@ -242,11 +242,11 @@
     "item.uc.compressed_stone_axe": "Compressed Stone Axe",
     "item.uc.compressed_stone_shovel": "Compressed Stone Shovel",
     "item.uc.compressed_stone_hoe": "Compressed Stone Hoe",
-    "item.uc.compressed_gold_sword": "Compressed Golden Sword",
-    "item.uc.compressed_gold_pickaxe": "Compressed Golden Pickaxe",
-    "item.uc.compressed_gold_axe": "Compressed Golden Axe",
-    "item.uc.compressed_gold_shovel": "Compressed Golden Shovel",
-    "item.uc.compressed_gold_hoe": "Compressed Golden Hoe",
+    "item.uc.compressed_gold_sword": "Compressed Gold Sword",
+    "item.uc.compressed_gold_pickaxe": "Compressed Gold Pickaxe",
+    "item.uc.compressed_gold_axe": "Compressed Gold Axe",
+    "item.uc.compressed_gold_shovel": "Compressed Gold Shovel",
+    "item.uc.compressed_gold_hoe": "Compressed Gold Hoe",
     "item.uc.compressed_iron_sword": "Compressed Iron Sword",
     "item.uc.compressed_iron_pickaxe": "Compressed Iron Pickaxe",
     "item.uc.compressed_iron_axe": "Compressed Iron Axe",
@@ -281,5 +281,10 @@
     "item.uc.compressed_netherite_helmet": "Compressed Netherite Helmet",
     "item.uc.compressed_netherite_chestplate": "Compressed Netherite Chestplate",
     "item.uc.compressed_netherite_leggings": "Compressed Netherite Leggings",
-    "item.uc.compressed_netherite_boots": "Compressed Netherite Boots"
+    "item.uc.compressed_netherite_boots": "Compressed Netherite Boots",
+    "item.uc.compressed_wood_sword": "Compressed Wood Sword",
+    "item.uc.compressed_wood_pickaxe": "Compressed Wood Pickaxe",
+    "item.uc.compressed_wood_axe": "Compressed Wood Axe",
+    "item.uc.compressed_wood_shovel": "Compressed Wood Shovel",
+    "item.uc.compressed_wood_hoe": "Compressed Wood Hoe"
 }
