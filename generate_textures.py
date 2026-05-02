@@ -259,14 +259,23 @@ def extract_all_textures(jar_path):
 
         print("\n  Armor layer textures:")
         for mat, vanilla_mat in ARMOR_LAYER_SOURCES.items():
-            for layer in [1, 2]:
-                stem = f"{vanilla_mat}_layer_{layer}"
-                img  = extract_from_jar(jar, "models/armor", stem)
+            # In 1.21.1, vanilla armor textures moved to entity/equipment/
+            # layer_1 (body) = humanoid/<name>.png
+            # layer_2 (legs) = humanoid_leggings/<name>.png
+            # We fall back to the old models/armor path if the new one isn't found
+            for layer, folder, stem in [
+                (1, "entity/equipment/humanoid",          vanilla_mat),
+                (2, "entity/equipment/humanoid_leggings", vanilla_mat),
+            ]:
+                img = extract_from_jar(jar, folder, stem)
+                # Fallback to old path
+                if img is None:
+                    img = extract_from_jar(jar, "models/armor", f"{vanilla_mat}_layer_{layer}")
                 if img:
                     armor_layer_textures[f"compressed_{mat}_layer_{layer}"] = img
                     print(f"    v compressed_{mat}_layer_{layer}")
                 else:
-                    print(f"    x compressed_{mat}_layer_{layer} -- not found, skipping")
+                    print(f"    x compressed_{mat}_layer_{layer} -- not found in jar")
 
     return side_textures, top_textures, item_textures, tool_textures, armor_item_textures, armor_layer_textures
 
@@ -365,14 +374,36 @@ def write_armor_item_textures(armor_item_textures, resource_path):
 def write_armor_layer_textures(armor_layer_textures, resource_path):
     """
     Armor layer textures (shown on the player body).
-    Written to assets/uc/textures/models/armor/
+    Written to BOTH locations for compatibility:
+      - assets/uc/textures/models/armor/  (old path, Forge 1.21.1)
+      - assets/uc/textures/entity/equipment/humanoid/       (layer_1, new path)
+      - assets/uc/textures/entity/equipment/humanoid_leggings/ (layer_2, new path)
     No border darkening — the large layout texture looks wrong with it.
     """
-    out_base = resource_path / "assets" / MOD_ID / "textures" / "models" / "armor"
-    out_base.mkdir(parents=True, exist_ok=True)
+    old_base     = resource_path / "assets" / MOD_ID / "textures" / "models" / "armor"
+    new_humanoid = resource_path / "assets" / MOD_ID / "textures" / "entity" / "equipment" / "humanoid"
+    new_leggings = resource_path / "assets" / MOD_ID / "textures" / "entity" / "equipment" / "humanoid_leggings"
+
+    for base in [old_base, new_humanoid, new_leggings]:
+        base.mkdir(parents=True, exist_ok=True)
+
     for name, base_img in armor_layer_textures.items():
         processed = apply_effects_no_border(base_img, 0)
-        processed.save(out_base / f"{name}.png")
+
+        # Old path: compressed_iron_layer_1.png / compressed_iron_layer_2.png
+        processed.save(old_base / f"{name}.png")
+
+        # New path: strip _layer_1 / _layer_2 suffix, use material name only
+        # e.g. compressed_iron_layer_1 -> compressed_iron.png in humanoid/
+        #      compressed_iron_layer_2 -> compressed_iron.png in humanoid_leggings/
+        mat_name = name.rsplit("_layer_", 1)[0]   # e.g. "compressed_iron"
+        layer_num = int(name.rsplit("_layer_", 1)[1])  # 1 or 2
+
+        if layer_num == 1:
+            processed.save(new_humanoid / f"{mat_name}.png")
+        else:
+            processed.save(new_leggings / f"{mat_name}.png")
+
         print(f"    v {name}")
 
 # =============================================================================
